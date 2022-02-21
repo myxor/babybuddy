@@ -11,12 +11,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.baby-buddy.net/contributing/</loc>
+         <loc>https://docs.baby-buddy.net/import-export/</loc>
          <lastmod>2022-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.baby-buddy.net/import-export/</loc>
+         <loc>https://docs.baby-buddy.net/contributing/development-environment/</loc>
+         <lastmod>2022-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.baby-buddy.net/contributing/gulp-command-reference/</loc>
+         <lastmod>2022-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.baby-buddy.net/contributing/pull-requests/</loc>
+         <lastmod>2022-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.baby-buddy.net/contributing/translation/</loc>
          <lastmod>2022-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>

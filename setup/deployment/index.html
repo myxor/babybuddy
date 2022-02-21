@@ -452,6 +452,96 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Contributing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contributing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Contributing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/development-environment/" class="md-nav__link">
+        Development environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/translation/" class="md-nav__link">
+        Translation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/pull-requests/" class="md-nav__link">
+        Pull requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/gulp-command-reference/" class="md-nav__link">
+        Gulp command reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../import-export/" class="md-nav__link">
         Import/Export
@@ -470,21 +560,6 @@
     <li class="md-nav__item">
       <a href="../../api/" class="md-nav__link">
         API
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../contributing/" class="md-nav__link">
-        Contributing
       </a>
     </li>
   
@@ -578,7 +653,7 @@
 <p>The default username and password for Baby Buddy is <code>admin</code>/<code>admin</code>. For any
 deployment, <strong>log in and change the default password immediately</strong>.</p>
 <p>Many of Baby Buddy's configuration settings can be controlled using environment
-variables - see <a href="/docs/setup/configuration.md">Configuration</a> for detailed information.</p>
+variables - see <a href="../configuration/">Configuration</a> for detailed information.</p>
 <h2 id="docker">Docker</h2>
 <p>Baby Buddy relies on the <a href="https://www.linuxserver.io/">LinuxServer.io</a> community
 for a multi-architecture container with strong support. See
@@ -611,12 +686,12 @@ python3 /app/babybuddy/manage.py clearsessions
 <p><a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fbabybuddy%2Fbabybuddy&amp;template=https%3A%2F%2Fgithub.com%2Fbabybuddy%2Fbabybuddy"><img alt="Deploy" src="https://www.herokucdn.com/deploy/button.svg" /></a></p>
 <p>For manual deployments to Heroku without using the "deploy" button, make sure to
 create the following settings before pushing:</p>
-<pre><code>heroku config:set DJANGO_SETTINGS_MODULE=babybuddy.settings.heroku
+<pre><code>heroku config:set DISABLE_COLLECTSTATIC=1
+heroku config:set DJANGO_SETTINGS_MODULE=babybuddy.settings.heroku
 heroku config:set SECRET_KEY=&lt;CHANGE TO SOMETHING RANDOM&gt;
-heroku config:set DISABLE_COLLECTSTATIC=1
 heroku config:set TIME_ZONE=&lt;DESIRED DEFAULT TIMEZONE&gt;
 </code></pre>
-<p>See <a href="/docs/setup/configuration.md">Configuration</a> for other settings that can be controlled
+<p>See <a href="../configuration/">Configuration</a> for other settings that can be controlled
 by <code>heroku config:set</code>.</p>
 <p>After an initial push, execute the following commands:</p>
 <pre><code>heroku run python manage.py migrate
