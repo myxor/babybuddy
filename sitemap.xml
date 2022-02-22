@@ -2,67 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.baby-buddy.net/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.baby-buddy.net/api/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.baby-buddy.net/import-export/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.baby-buddy.net/contributing/development-environment/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.baby-buddy.net/contributing/gulp-command-reference/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.baby-buddy.net/contributing/pull-requests/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.baby-buddy.net/contributing/translation/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.baby-buddy.net/setup/configuration/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.baby-buddy.net/setup/deployment/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.baby-buddy.net/user-guide/adding-entries/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.baby-buddy.net/user-guide/getting-started/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.baby-buddy.net/user-guide/managing-users/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.baby-buddy.net/user-guide/using-timers/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
