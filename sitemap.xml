@@ -51,6 +51,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.baby-buddy.net/setup/ssl/</loc>
+         <lastmod>2022-02-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.baby-buddy.net/setup/subdirectory/</loc>
          <lastmod>2022-02-27</lastmod>
          <changefreq>daily</changefreq>

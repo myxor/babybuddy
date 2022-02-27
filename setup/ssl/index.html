@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://docs.baby-buddy.net/user-guide/using-timers/">
+        <link rel="canonical" href="https://docs.baby-buddy.net/setup/ssl/">
       
       <link rel="icon" href="../../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.10">
     
     
       
-        <title>Using Timers - Baby Buddy Documentation</title>
+        <title>HTTPS/SSL configuration - Baby Buddy Documentation</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-timers" class="md-skip">
+        <a href="#httpsssl-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using Timers
+              HTTPS/SSL configuration
             
           </span>
         </div>
@@ -222,12 +222,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -250,7 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/deployment/" class="md-nav__link">
+      <a href="../deployment/" class="md-nav__link">
         Deployment
       </a>
     </li>
@@ -264,128 +266,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/configuration/" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         Configuration
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../setup/ssl/" class="md-nav__link">
-        HTTPS/SSL configuration
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../setup/subdirectory/" class="md-nav__link">
-        Subdirectory configuration
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../setup/proxy/" class="md-nav__link">
-        Proxy configuration
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3">
-          User Guide
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          User Guide
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../getting-started/" class="md-nav__link">
-        Getting Started
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../managing-users/" class="md-nav__link">
-        Managing Users
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../adding-entries/" class="md-nav__link">
-        Adding Entries
       </a>
     </li>
   
@@ -408,12 +290,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Using Timers
+          HTTPS/SSL configuration
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Using Timers
+        HTTPS/SSL configuration
       </a>
       
         
@@ -432,51 +314,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#starting-a-timer" class="md-nav__link">
-    Starting a Timer
+  <a href="#install-nginx" class="md-nav__link">
+    Install NGINX
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#editing-a-timer" class="md-nav__link">
-    Editing a Timer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deleting-a-timer" class="md-nav__link">
-    Deleting a Timer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-entries-from-timers" class="md-nav__link">
-    Creating Entries from Timers
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating Entries from Timers">
+    <nav class="md-nav" aria-label="Install NGINX">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-a-feeding-entry" class="md-nav__link">
-    Create a Feeding Entry
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-sleep-entry" class="md-nav__link">
-    Create a Sleep Entry
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-tummy-time-entry" class="md-nav__link">
-    Create a Tummy Time Entry
+  <a href="#configure-nginx" class="md-nav__link">
+    Configure NGINX
   </a>
   
 </li>
@@ -486,10 +333,149 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#install-certbot" class="md-nav__link">
+    Install Certbot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtain-and-install-certificate" class="md-nav__link">
+    Obtain and install certificate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-baby-buddy-configuration" class="md-nav__link">
+    Update Baby Buddy configuration
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subdirectory/" class="md-nav__link">
+        Subdirectory configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proxy/" class="md-nav__link">
+        Proxy configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/managing-users/" class="md-nav__link">
+        Managing Users
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/adding-entries/" class="md-nav__link">
+        Adding Entries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/using-timers/" class="md-nav__link">
+        Using Timers
+      </a>
     </li>
   
 
@@ -648,57 +634,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#starting-a-timer" class="md-nav__link">
-    Starting a Timer
+  <a href="#install-nginx" class="md-nav__link">
+    Install NGINX
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#editing-a-timer" class="md-nav__link">
-    Editing a Timer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deleting-a-timer" class="md-nav__link">
-    Deleting a Timer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-entries-from-timers" class="md-nav__link">
-    Creating Entries from Timers
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating Entries from Timers">
+    <nav class="md-nav" aria-label="Install NGINX">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-a-feeding-entry" class="md-nav__link">
-    Create a Feeding Entry
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-sleep-entry" class="md-nav__link">
-    Create a Sleep Entry
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-tummy-time-entry" class="md-nav__link">
-    Create a Tummy Time Entry
+  <a href="#configure-nginx" class="md-nav__link">
+    Configure NGINX
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-certbot" class="md-nav__link">
+    Install Certbot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtain-and-install-certificate" class="md-nav__link">
+    Obtain and install certificate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-baby-buddy-configuration" class="md-nav__link">
+    Update Baby Buddy configuration
+  </a>
   
 </li>
       
@@ -714,58 +686,110 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/babybuddy/babybuddy/edit/master/docs/user-guide/using-timers.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/babybuddy/babybuddy/edit/master/docs/setup/ssl.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="using-timers">Using Timers</h1>
-<h2 id="starting-a-timer">Starting a Timer</h2>
-<p>From the top navigation bar select the clock icon to start a timer. A new screen
-will appear with a timer, the date and buttons to assign this timer to a
-feeding, sleep or tummy time activity. On the bottom of the timer is a red
-button to delete the timer, a blue button to edit the timer and add a name or
-change the start time, an orange button to restart the timer and a yellow button
-to stop the timer.</p>
-<h2 id="editing-a-timer">Editing a Timer</h2>
-<video style="max-width: 320px;" autoplay controls loop muted playsinline>
-  <source src="../../assets/videos/timer_edit.mp4" type="video/mp4">
-</video>
+<h1 id="httpsssl-configuration">HTTPS/SSL configuration</h1>
+<p>The example Docker and manual deployment methods do not include HTTPS/SSL by default.
+Additional tools and configuration are required to add HTTPS support.</p>
+<p>The information here assumes Baby Buddy has been deployed to a Debian-like system with
+<a href="https://snapcraft.io/docs/installing-snapd">snapd installed</a> for Certbot support with
+Let's Encrypt. These requirements can skipped if SSL certificates are obtained by some
+other way.</p>
+<h2 id="install-nginx">Install NGINX</h2>
+<p>If NGINX is not already installed on the host system install it with a package manager.</p>
+<div class="highlight"><pre><span></span><code>apt-get -y install nginx
+</code></pre></div>
+<p>NGINX will be used to proxy HTTPS traffic to Baby Buddy. There are many other proxies
+available for this (often with Let's Encrypt support, as well) so a different one can
+be used if desired.</p>
+<h3 id="configure-nginx">Configure NGINX</h3>
+<p>If Baby Buddy is running from Docker a new NGINX site will need to be created to send
+traffic to Docker. The configuration below uses the example domain <code>babybuddy.example.com</code>
+and assumes Docker has exposed Baby Buddy on port <code>8000</code> (the default configuration).</p>
+<div class="highlight"><pre><span></span><code>editor /etc/nginx/sites-available/babybuddy
+</code></pre></div>
+<p>Initial configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="k">server_tokens</span><span class="w">               </span><span class="no">off</span><span class="p">;</span><span class="w"></span>
+<span class="k">access_log</span><span class="w">                  </span><span class="s">/var/log/nginx/babybuddy.access.log</span><span class="p">;</span><span class="w"></span>
+<span class="k">error_log</span><span class="w">                   </span><span class="s">/var/log/nginx/babybuddy.error.log</span><span class="p">;</span><span class="w"></span>
 
-<h2 id="deleting-a-timer">Deleting a Timer</h2>
-<video style="max-width: 320px;" autoplay controls loop muted playsinline>
-  <source src="../../assets/videos/timer_delete.mp4" type="video/mp4">
-</video>
+<span class="k">server</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kn">server_name</span><span class="w">               </span><span class="s">babybuddy.example.com</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kn">proxy_pass</span><span class="w">              </span><span class="s">http://localhost:8000</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">proxy_set_header</span><span class="w">        </span><span class="s">Host</span><span class="w"> </span><span class="nv">$host</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Enable the new site:</p>
+<div class="highlight"><pre><span></span><code>ln -s /etc/nginx/sites-available/babybuddy /etc/nginx/sites-enabled/babybuddy
+service nginx restart
+</code></pre></div>
+<p>Confirm the site is not accessible at <code>http://babybuddy.example.com</code>. Note: Attempting
+to log in will result in a CSRF error! This will be addressed after HTTPS has been
+established.</p>
+<h2 id="install-certbot">Install Certbot</h2>
+<p>This example uses <a href="https://letsencrypt.org/">Let's Encrypt's</a> free service for obtaining
+SSL certificates. Other methods can be used to obtain and install a certificate as
+desired.</p>
+<p><a href="https://certbot.eff.org/instructions">Certbot</a> is used to obtain free SSL certificates
+from Let's Encrypt. </p>
+<div class="highlight"><pre><span></span><code>snap install core <span class="o">&amp;&amp;</span> snap refresh core
+snap install --classic certbot
+ln -s /snap/bin/certbot /usr/bin/certbot
+</code></pre></div>
+<h2 id="obtain-and-install-certificate">Obtain and install certificate</h2>
+<p>The following command will ask for an email address to register with Let's Encrypt and
+then prompt a service agreement and which NGINX host to obtain a certificate for. The
+certificate will be installed and activated automatically.</p>
+<div class="highlight"><pre><span></span><code>certbot --nginx
+<span class="o">[</span>answers prompts as required<span class="o">]</span>
+service nginx restart
+</code></pre></div>
+<p>Certbot should have updated the NGINX site configuration (<code>/etc/nginx/sites-available/babybuddy</code>)
+to look something like this:</p>
+<div class="highlight"><pre><span></span><code><span class="k">server_tokens</span><span class="w">               </span><span class="no">off</span><span class="p">;</span><span class="w"></span>
+<span class="k">access_log</span><span class="w">                  </span><span class="s">/var/log/nginx/babybuddy.access.log</span><span class="p">;</span><span class="w"></span>
+<span class="k">error_log</span><span class="w">                   </span><span class="s">/var/log/nginx/babybuddy.error.log</span><span class="p">;</span><span class="w"></span>
 
-<h2 id="creating-entries-from-timers">Creating Entries from Timers</h2>
-<h3 id="create-a-feeding-entry">Create a Feeding Entry</h3>
-<video style="max-width: 320px;" autoplay controls loop muted playsinline>
-  <source src="../../assets/videos/timer_feeding.mp4" type="video/mp4">
-</video>
+<span class="k">server</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kn">server_name</span><span class="w">               </span><span class="s">babybuddy.example.com</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kn">proxy_pass</span><span class="w">              </span><span class="s">http://localhost:8000</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">proxy_set_header</span><span class="w">        </span><span class="s">Host</span><span class="w"> </span><span class="nv">$host</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-<p>From the top navigation bar select the clock icon to start a timer. When the
-activity is complete, select Feeding. As necessary, modify the child and
-start/end time of the timer. Update the feed to reflect the type of feeding
-(i.e. breast milk, bottle, etc.), the feeding method and amount. When ready,
-select Submit.</p>
-<h3 id="create-a-sleep-entry">Create a Sleep Entry</h3>
-<video style="max-width: 320px;" autoplay controls loop muted playsinline>
-  <source src="../../assets/videos/timer_sleep.mp4" type="video/mp4">
-</video>
+<span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">443</span><span class="w"> </span><span class="s">ssl</span><span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="w">    </span><span class="kn">ssl_certificate</span><span class="w"> </span><span class="s">/etc/letsencrypt/live/babybuddy.example.com/fullchain.pem</span><span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="w">    </span><span class="kn">ssl_certificate_key</span><span class="w"> </span><span class="s">/etc/letsencrypt/live/babybuddy.example.com/privkey.pem</span><span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="w">    </span><span class="kn">include</span><span class="w"> </span><span class="s">/etc/letsencrypt/options-ssl-nginx.conf</span><span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="w">    </span><span class="kn">ssl_dhparam</span><span class="w"> </span><span class="s">/etc/letsencrypt/ssl-dhparams.pem</span><span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="p">}</span><span class="w"></span>
 
-<p>From the top navigation bar select the clock icon to start a timer. When the
-activity is complete, select Sleep. As necessary, modify the child and start/end
-time of the timer. Add any relevant notes to the sleep. When ready, select
-Submit.</p>
-<h3 id="create-a-tummy-time-entry">Create a Tummy Time Entry</h3>
-<video style="max-width: 320px;" autoplay controls loop muted playsinline>
-  <source src="../../assets/videos/timer_tummy_time.mp4" type="video/mp4">
-</video>
+<span class="k">server</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kn">if</span><span class="w"> </span><span class="s">(</span><span class="nv">$host</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">babybuddy.example.com)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">return</span><span class="w"> </span><span class="mi">301</span><span class="w"> </span><span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
 
-<p>From the top navigation bar select the clock icon to start a timer. When the
-activity is complete, select Tummy Time. As necessary, modify the child and
-start/end time of the timer. Add any relevant tummy time milestones. When ready,
-select Submit.</p>
+<span class="w">  </span><span class="kn">server_name</span><span class="w">               </span><span class="s">babybuddy.example.com</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kn">listen</span><span class="w">                    </span><span class="mi">80</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">return</span><span class="w"> </span><span class="mi">404</span><span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>If the certificate was obtained by some other means the configuration about should be
+instructive for how to add it to the NGINX site configuration.</p>
+<h2 id="update-baby-buddy-configuration">Update Baby Buddy configuration</h2>
+<p>Lastly Baby Buddy's configuration will need to updated to account for the proxy. For
+details on these settings see <a href="../proxy/">Proxy configuration</a>.</p>
+<p>Add the following two environment variables via the Docker or uWSGI configuration (if
+using the <a href="../deployment/#example-deployment">example deployment</a>):</p>
+<div class="highlight"><pre><span></span><code><span class="na">CSRF_TRUSTED_ORIGINS</span><span class="o">=</span><span class="s">https://babybuddy.example.com</span><span class="w"></span>
+<span class="na">SECURE_PROXY_SSL_HEADER</span><span class="o">=</span><span class="s">True</span><span class="w"></span>
+</code></pre></div>
+<p>That's it! Restart Docker or uWSGI and Baby Buddy should not be accessible from HTTPS!</p>
 
               
             </article>
@@ -779,7 +803,7 @@ select Submit.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../adding-entries/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Adding Entries" rel="prev">
+        <a href="../configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuration" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -788,20 +812,20 @@ select Submit.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Adding Entries
+              Configuration
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../contributing/development-environment/" class="md-footer__link md-footer__link--next" aria-label="Next: Development environment" rel="next">
+        <a href="../subdirectory/" class="md-footer__link md-footer__link--next" aria-label="Next: Subdirectory configuration" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Development environment
+              Subdirectory configuration
             </div>
           </div>
           <div class="md-footer__button md-icon">

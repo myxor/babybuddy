@@ -355,6 +355,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../ssl/" class="md-nav__link">
+        HTTPS/SSL configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../subdirectory/" class="md-nav__link">
         Subdirectory configuration
       </a>
@@ -691,7 +705,7 @@ configuration as a template to get started quickly:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2.1&quot;</span><span class="w"></span>
 <span class="nt">services</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">babybuddy</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/linuxserver/babybuddy</span><span class="w"></span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lscr.io/linuxserver/babybuddy</span><span class="w"></span>
 <span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">babybuddy</span><span class="w"></span>
 <span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TZ=UTC</span><span class="w"></span>
@@ -701,9 +715,6 @@ configuration as a template to get started quickly:</p>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8000:8000</span><span class="w"></span>
 <span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span><span class="w"></span>
 </code></pre></div>
-<p>:warning: Baby Buddy v1.7.0 was the final version deployed to
-<a href="https://hub.docker.com/r/babybuddy/babybuddy">babybuddy/babybuddy</a> on Docker Hub
-Future versions of Baby Buddy will use the LSIO container.</p>
 <p>For doing administrative work within the LSIO container, setting an environment variable may be necessary.
 For example:</p>
 <div class="highlight"><pre><span></span><code>docker exec -it babybuddy /bin/bash
