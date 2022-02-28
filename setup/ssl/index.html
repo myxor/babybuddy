@@ -314,6 +314,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#configuration-requirements" class="md-nav__link">
+    Configuration requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-based-proxy" class="md-nav__link">
+    Host-based proxy
+  </a>
+  
+    <nav class="md-nav" aria-label="Host-based proxy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#install-nginx" class="md-nav__link">
     Install NGINX
   </a>
@@ -332,25 +347,50 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#install-certbot" class="md-nav__link">
     Install Certbot
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#obtain-and-install-certificate" class="md-nav__link">
     Obtain and install certificate
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#update-baby-buddy-configuration" class="md-nav__link">
-    Update Baby Buddy configuration
+  <a href="#container-based-proxy" class="md-nav__link">
+    Container-based proxy
   </a>
+  
+    <nav class="md-nav" aria-label="Container-based proxy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-nginx-service" class="md-nav__link">
+    Add NGINX service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-certificates" class="md-nav__link">
+    Add certificates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -634,6 +674,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#configuration-requirements" class="md-nav__link">
+    Configuration requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-based-proxy" class="md-nav__link">
+    Host-based proxy
+  </a>
+  
+    <nav class="md-nav" aria-label="Host-based proxy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#install-nginx" class="md-nav__link">
     Install NGINX
   </a>
@@ -652,25 +707,50 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#install-certbot" class="md-nav__link">
     Install Certbot
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#obtain-and-install-certificate" class="md-nav__link">
     Obtain and install certificate
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#update-baby-buddy-configuration" class="md-nav__link">
-    Update Baby Buddy configuration
+  <a href="#container-based-proxy" class="md-nav__link">
+    Container-based proxy
   </a>
+  
+    <nav class="md-nav" aria-label="Container-based proxy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-nginx-service" class="md-nav__link">
+    Add NGINX service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-certificates" class="md-nav__link">
+    Add certificates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -694,18 +774,29 @@
 <h1 id="httpsssl-configuration">HTTPS/SSL configuration</h1>
 <p>The example Docker and manual deployment methods do not include HTTPS/SSL by default.
 Additional tools and configuration are required to add HTTPS support.</p>
-<p>The information here assumes Baby Buddy has been deployed to a Debian-like system with
-<a href="https://snapcraft.io/docs/installing-snapd">snapd installed</a> for Certbot support with
-Let's Encrypt. These requirements can skipped if SSL certificates are obtained by some
-other way.</p>
-<h2 id="install-nginx">Install NGINX</h2>
+<h2 id="configuration-requirements">Configuration requirements</h2>
+<p>For either approach (host- or container-based) Baby Buddy's configuration will need to
+be updated to account for the proxy. For details on these settings see <a href="../proxy/">Proxy configuration</a>.</p>
+<p>After configuring the proxy set the following two environment variables and then restart
+necessary services:</p>
+<div class="highlight"><pre><span></span><code><span class="na">CSRF_TRUSTED_ORIGINS</span><span class="o">=</span><span class="s">https://babybuddy.example.com</span><span class="w"></span>
+<span class="na">SECURE_PROXY_SSL_HEADER</span><span class="o">=</span><span class="s">True</span><span class="w"></span>
+</code></pre></div>
+<h2 id="host-based-proxy">Host-based proxy</h2>
+<p>This guide assumes Baby Buddy has been deployed to a Debian-like system with
+<a href="https://snapcraft.io/docs/installing-snapd">snapd installed</a> using the <a href="../deployment/#example-deployment">example deployment</a>
+however this approach can also be used with a Docker deployment if having the proxy
+in the host is desired (otherwise see <a href="#container-based-proxy">Container-based proxy</a>).</p>
+<p>If the example deployment with uWSGI and NGINX is already used skip to <a href="#install-certbot">Install Certbot</a>
+and <a href="#obtain-and-install-certificate">Obtain and install certificate</a>.</p>
+<h3 id="install-nginx">Install NGINX</h3>
 <p>If NGINX is not already installed on the host system install it with a package manager.</p>
 <div class="highlight"><pre><span></span><code>apt-get -y install nginx
 </code></pre></div>
 <p>NGINX will be used to proxy HTTPS traffic to Baby Buddy. There are many other proxies
 available for this (often with Let's Encrypt support, as well) so a different one can
 be used if desired.</p>
-<h3 id="configure-nginx">Configure NGINX</h3>
+<h4 id="configure-nginx">Configure NGINX</h4>
 <p>If Baby Buddy is running from Docker a new NGINX site will need to be created to send
 traffic to Docker. The configuration below uses the example domain <code>babybuddy.example.com</code>
 and assumes Docker has exposed Baby Buddy on port <code>8000</code> (the default configuration).</p>
@@ -731,7 +822,7 @@ service nginx restart
 <p>Confirm the site is not accessible at <code>http://babybuddy.example.com</code>. Note: Attempting
 to log in will result in a CSRF error! This will be addressed after HTTPS has been
 established.</p>
-<h2 id="install-certbot">Install Certbot</h2>
+<h3 id="install-certbot">Install Certbot</h3>
 <p>This example uses <a href="https://letsencrypt.org/">Let's Encrypt's</a> free service for obtaining
 SSL certificates. Other methods can be used to obtain and install a certificate as
 desired.</p>
@@ -741,7 +832,7 @@ from Let's Encrypt. </p>
 snap install --classic certbot
 ln -s /snap/bin/certbot /usr/bin/certbot
 </code></pre></div>
-<h2 id="obtain-and-install-certificate">Obtain and install certificate</h2>
+<h3 id="obtain-and-install-certificate">Obtain and install certificate</h3>
 <p>The following command will ask for an email address to register with Let's Encrypt and
 then prompt a service agreement and which NGINX host to obtain a certificate for. The
 certificate will be installed and activated automatically.</p>
@@ -781,15 +872,50 @@ to look something like this:</p>
 </code></pre></div>
 <p>If the certificate was obtained by some other means the configuration about should be
 instructive for how to add it to the NGINX site configuration.</p>
-<h2 id="update-baby-buddy-configuration">Update Baby Buddy configuration</h2>
-<p>Lastly Baby Buddy's configuration will need to updated to account for the proxy. For
-details on these settings see <a href="../proxy/">Proxy configuration</a>.</p>
-<p>Add the following two environment variables via the Docker or uWSGI configuration (if
-using the <a href="../deployment/#example-deployment">example deployment</a>):</p>
-<div class="highlight"><pre><span></span><code><span class="na">CSRF_TRUSTED_ORIGINS</span><span class="o">=</span><span class="s">https://babybuddy.example.com</span><span class="w"></span>
-<span class="na">SECURE_PROXY_SSL_HEADER</span><span class="o">=</span><span class="s">True</span><span class="w"></span>
+<h2 id="container-based-proxy">Container-based proxy</h2>
+<p>If Baby Buddy is already hosted in a Docker container the proxy (NGINX) can be hosted
+there as well. The configuration provided here assumes the <code>docker-compose.yml</code> example
+from the <a href="../deployment/#docker">Docker deployment method</a> is used.</p>
+<h3 id="add-nginx-service">Add NGINX service</h3>
+<p>Add the following <code>services</code> entry to <code>docker-compose.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">babybuddy-nginx</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span><span class="w"></span>
+<span class="w">  </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">babybuddy-nginx</span><span class="w"></span>
+<span class="w">  </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/appdata/nginx.conf:/etc/nginx/conf.d/default.conf</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/appdata/logs:/var/log/nginx</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/appdata/certs:/certs</span><span class="w"></span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80:80</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">443:443</span><span class="w"></span>
+<span class="w">  </span><span class="nt">depends_on</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">babybuddy</span><span class="w"></span>
 </code></pre></div>
-<p>That's it! Restart Docker or uWSGI and Baby Buddy should not be accessible from HTTPS!</p>
+<p>Set the contents of <code>/path/to/appdata/nginx.conf</code> to:</p>
+<div class="highlight"><pre><span></span><code><span class="k">server</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kn">server_name</span><span class="w">         </span><span class="s">babybuddy.example.com</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">listen</span><span class="w">              </span><span class="mi">443</span><span class="w"> </span><span class="s">ssl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">ssl_certificate</span><span class="w">     </span><span class="s">/certs/babybuddy.example.com.crt</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">ssl_certificate_key</span><span class="w"> </span><span class="s">/certs/babybuddy.example.com.key</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">proxy_pass</span><span class="w">              </span><span class="s">http://babybuddy:8000</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kn">proxy_set_header</span><span class="w">        </span><span class="s">Host</span><span class="w"> </span><span class="nv">$host</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">server</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kn">if</span><span class="w"> </span><span class="s">(</span><span class="nv">$host</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">babybuddy.example.com)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">return</span><span class="w"> </span><span class="mi">301</span><span class="w"> </span><span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kn">server_name</span><span class="w">         </span><span class="s">babybuddy.example.com</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">listen</span><span class="w">              </span><span class="mi">80</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kn">return</span><span class="w"> </span><span class="mi">404</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="add-certificates">Add certificates</h3>
+<p>Place certificates in <code>/path/to/appdata/certs</code> using the files name of <code>ssl_certificate</code>
+and <code>ssl_ceritifcate_key</code> in the NGINX configuration.</p>
 
               
             </article>
